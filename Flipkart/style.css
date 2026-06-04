@@ -32,9 +32,6 @@ body {
   background-color: #ffffff;
 }
 
-/* =========================
-   HEADER
-========================= */
 
 header {
   width: var(--content-width);
