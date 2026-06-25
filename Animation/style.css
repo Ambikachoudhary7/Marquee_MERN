@@ -1,0 +1,178 @@
+/* .container{
+    height: 100vh;
+    width: 100vh;
+    background-color: black;
+} */
+
+/* .box{
+    height: 200px;
+    width: 400px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    margin-top: 20px;
+
+}
+
+.box:hover{
+    background-color: blue;
+    width: 800px;
+}
+.box1:hover{
+    background-color: red;
+}
+.box2:hover{
+    background-color: orange;
+}
+.box3:hover{
+    background-color: blueviolet;
+} */
+
+/* move box let , right , bottom, left-bottom, left-top */
+/* .box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: red;
+    position: relative;
+    animation: moveBox 4s infinite;
+}
+@keyframes moveBox{
+    0%{
+        left: 0%;
+        top: 0%;
+    }
+    25%{
+        left: 200px;
+        top: 0;
+    }
+    50%{
+        top: 200px;
+        left: 200px;
+    }
+    75%{
+        right: 200px;
+        top: 200px;
+    }
+    100%{
+        bottom: 200px;
+        top: 0;
+        left: 0px;
+    }
+} */
+
+.container{
+    height: 600px;
+    width: 300px;
+    border: 4px solid black;
+    margin-left: 700px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+}
+.box{
+    height: 180px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 44px;
+    position: relative;
+    animation: moveBox 4s infinite;
+}
+/* .box1, .box2, .box3{
+    background-color: #333;
+}
+
+.box1{
+    animation: light1 6s infinite;
+}
+
+.box2{
+    animation: light2 6s infinite;
+}
+
+.box3{
+    animation: light3 6s infinite;
+}
+
+@keyframes light1{
+    0%,16%{ background:red; }
+    17%,83%{ background:#333; }
+    84%,100%{ background:red; }
+}
+
+@keyframes light2{
+    0%,16%{ background:#333; }
+    17%,33%{ background:orange; }
+    34%,66%{ background:#333; }
+    67%,83%{ background:orange; }
+    84%,100%{ background:#333; }
+}
+
+@keyframes light3{
+    0%,33%{ background:#333; }
+    34%,50%{ background:green; }
+    51%,100%{ background:#333; }
+} */
+
+.box{
+    background-color: #333;
+}
+
+.box1{
+    animation: traffic1 6s infinite;
+}
+
+.box2{
+    animation: traffic2 6s infinite;
+}
+
+.box3{
+    animation: traffic3 6s infinite;
+}
+
+@keyframes traffic1{
+    0%,16%,84%,100%{
+        background:red;
+        box-shadow: 0 0 20px red,
+                    0 0 40px red,
+                    0 0 60px red;
+    }
+    17%,83%{
+        background:#333;
+        box-shadow:none;
+    }
+}
+
+@keyframes traffic2{
+    0%,16%,84%,100%{
+        background:#333;
+        box-shadow:none;
+    }
+    17%,33%,67%,83%{
+        background:orange;
+        box-shadow: 0 0 20px orange,
+                    0 0 40px orange,
+                    0 0 60px orange;
+    }
+    34%,66%{
+        background:#333;
+        box-shadow:none;
+    }
+}
+
+@keyframes traffic3{
+    0%,33%,51%,100%{
+        background:#333;
+        box-shadow:none;
+    }
+    34%,50%{
+        background:green;
+        box-shadow: 0 0 20px green,
+                    0 0 40px green,
+                    0 0 60px green;
+    }
+}
