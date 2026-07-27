@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .box{
+            height: 400px;
+            width: 400px;
+            border: 4px solid black;
+            border-radius: 10px;
+            text-align: center;
+            margin:  0 auto;
+            padding: 30px;
+        }
+        .color{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 0 auto;
+        }
+        button{
+            
+            margin: 50px 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="color"></div>
+        <!-- <button id="red">Red</button>
+        <button id="blue">Blue</button>
+        <button id="green">Green</button> -->
+        <!-- write another way which make code sort -->
+
+        <button class="btn" data-color = "red" >Red</button>
+        <button class="btn" data-color = "blue" >Blue</button>
+        <button class="btn" data-color = "green" >Green</button>
+
+    </div>
+    <script>
+        //let color = document.querySelector(".color");
+        // let red = document.querySelector("#red");
+        // let blue = document.querySelector("#blue");
+        // let green = document.querySelector("#green");
+        // red.addEventListener("click", function(){
+        //     color.style.backgroundColor = "red";
+        // });
+        //  blue.addEventListener("click", function(){
+        //     color.style.backgroundColor = "blue";
+        // });
+        //  green.addEventListener("click", function(){
+        //     color.style.backgroundColor = "green";
+        // });
+        // use short method we have not create lot of function
+
+        let color = document.querySelector(".color");
+        let buttons = document.querySelectorAll(".btn");
+        buttons.forEach(function(button){
+            button.addEventListener("click", function(){
+                color.style.backgroundColor = button.dataset.color;
+            });
+        });
+
+
+    </script>
+</body>
+</html>

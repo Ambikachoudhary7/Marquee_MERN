@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count word</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Something">
+    <p></p>
+
+    <script>
+        let input = document.querySelector("input");
+        let p = document.querySelector("p");
+        input.addEventListener("input", function(){
+            let count = event.target.value.length;
+            p.innerText = "Total Character: "+ count;
+        });
+    </script>
+    
+</body>
+</html>
