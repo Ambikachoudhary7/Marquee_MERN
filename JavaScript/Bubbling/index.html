@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubling</title>
+    <style>
+        .parent{
+            height: 600px;
+            width: 600px;
+            border: 4px solid black;
+            text-align:  center;
+            margin: auto;
+            display: flex;
+            background-color: red;
+
+        }
+        .gp{
+            height: 400px;
+            width: 400px;
+            border: 4px solid black;
+            margin: auto;
+            display: flex;
+            background-color: aqua;
+
+        }
+        .gp2{
+            height: 250px;
+            width: 250px;
+            border: 4px solid black;
+            margin: auto;
+            display: flex;
+            background-color: orange;
+        }
+        .child{
+            height: 150px;
+            width: 150px;
+            border: 4px solid black;
+            margin: auto;
+            display: flex;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="gp">
+            <div class="gp2">
+                <div class="child">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let parent = document.querySelector(".parent");
+        let gp = document.querySelector(".gp");
+        let gp2 = document.querySelector(".gp2");
+        let child = document.querySelector(".child");
+
+        parent.addEventListener("click", function(){
+            console.log("Parent Click")
+        });
+        gp.addEventListener("click", function(e){
+            console.log("Grand parent click");
+            console.log(e.target);
+            console.log(e.type);
+        });
+        gp2.addEventListener("click", function(e){
+            e.stopImmediatePropagation();
+            console.log("Grand Parent2 click");
+        });
+        child.addEventListener("click", function(e){
+            e.stopPropagation();
+            console.log("Child is Click");
+        });
+    </script>
+</body>
+</html>

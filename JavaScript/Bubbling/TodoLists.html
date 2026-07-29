@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        .container{
+            height: 600px;
+            width: 1000px;
+            border: 2px solid blueviolet;
+            border-radius: 20px;
+            margin: 80px auto;
+        }
+        .box{
+            height: 150px;
+            width: 900px;
+            border-radius: 30px;
+            gap: 20px;
+            background: #4f46e5;
+            margin:  40px auto;
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;   
+        }
+        .task{
+            display: flex;
+            gap: 8px;
+            margin: 20px 0;     
+        }
+         #input-box {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+            margin-left:  60px;
+        }
+
+        #input-box:focus {
+            border-color: #4f46e5;
+        }
+
+        #add-btn {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+            margin-right: 60px;
+        }
+
+        #add-btn:hover {
+            background: #3730a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>My Todo List</h1>
+             <img
+                src="https://cdn-icons-png.flaticon.com/512/8019/8019152.png"
+                width="50"
+                height="50"
+                alt="">
+        </div>
+        <div class="task">
+            <input type="text" id="input-box" placeholder="Enter Task..">
+            <button id="add-btn">+ Add Item</button>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
