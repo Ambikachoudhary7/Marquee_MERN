@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Event</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- <button id="red">Red</button>
+    <button id="yellow">Yellow</button>
+    <button id="green">Green</button> -->
+
+    <!-- hide -->
+     <p>JavaScript is Awesome!</p>
+
+      <button>Hide</button>
+    <script>
+        // let red = document.querySelector("#red");
+        // let yel = document.querySelector("#yellow");
+        // let gren = document.querySelector("#green");
+        // // red.addEventListener("click", function () {
+        // //     document.body.style.backgroundColor = "red";
+        // // });
+        // // yel.addEventListener("click", function () {
+        // //     document.body.style.backgroundColor = "yellow";
+        // // });
+        // // gren.addEventListener("click", function () {
+        // //     document.body.style.backgroundColor = "green";
+        // // });
+        // function changeColor(color){
+        //    document.body.style.backgroundColor = color;
+        // }
+        // red.addEventListener("click", ()=> changeColor("red"));
+        // yel.addEventListener("click", ()=> changeColor("yellow"));
+        // gren.addEventListener("click", ()=> changeColor("green"));
+
+        let p = document.querySelector("p");
+        let btn = document.querySelector("button");
+        let hidden = false;
+        btn.addEventListener("click", function(){
+        //    if(p.style.display == "none"){
+        //         p.style.display = "block";
+        //         btn.innerText = "Hide"
+        //     }else{
+        //         p.style.display = "none";
+        //         btn.innerText = "show"
+            //}
+            if(hidden){
+                p.style.display = "block";
+                btn.innerText = "Hide"
+                hidden = false;
+            }else{
+                p.style.display = "none";
+                btn.innerText = "show"
+                hidden = true;
+            }
+        
+        });
+    </script>
+</body>
+
+</html>

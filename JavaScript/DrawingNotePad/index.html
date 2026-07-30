@@ -233,9 +233,19 @@
         board.addEventListener("mouseleave", () => {
             board.style.border = "2px solid blue";
         });
-        size.addEventListener("click", function(){
-            
-        })
+        size.addEventListener("click", function () {
+
+        });
+        size.addEventListener("input", () => {
+
+            const dots = document.querySelectorAll(".dot");
+
+            dots.forEach(dot => {
+                dot.style.width = size.value + "px";
+                dot.style.height = size.value + "px";
+            });
+
+        });
 
     </script>
 
