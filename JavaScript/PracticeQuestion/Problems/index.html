@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container {
+            width: 900px;
+            min-height: 300px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            background: pink;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .container img,
+        .box img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            cursor: grab;
+            border-radius: 10px;
+        }
+
+        .box {
+            width: 900px;
+            min-height: 250px;
+            margin-top: 30px;
+            border: 3px solid black;
+            border-radius: 15px;
+            background: white;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Drag Images into the Box</h2>
+
+    <div class="container">
+
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300" draggable="true">
+
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=300" draggable="true">
+
+        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=300" draggable="true">
+
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=300" draggable="true">
+
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=300" draggable="true">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+    <script>
+
+        const images = document.querySelectorAll("img");
+
+        const container = document.querySelector(".container");
+        const box = document.querySelector(".box");
+
+        let selectedImage = null;
+        images.forEach((img) => {
+            img.addEventListener("dragstart", function () {
+                selectedImage = img;
+            });
+        });
+
+        container.addEventListener("dragover", function (e) {
+            e.preventDefault();
+        });
+
+        container.addEventListener("drop", function () {
+            container.appendChild(selectedImage);
+        });
+
+        box.addEventListener("dragover", function (e) {
+            e.preventDefault();
+        });
+
+        box.addEventListener("drop", function () {
+            box.appendChild(selectedImage);
+        });
+
+    </script>
+
+</body>
+
+</html>

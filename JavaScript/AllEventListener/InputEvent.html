@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Event</title>
+</head>
+<body>
+    <input type="password" placeholder="Enter your name">
+    <button>click Me!</button>
+    <p></p>
+    <script>
+        // let input = document.querySelector("input");
+        // let p = document.querySelector("p");
+        // input.addEventListener("input", function(event){
+        //     // p.innerText = `You Enter is: ${event.target.value}`;
+        //     p.innerText = `You Enter is: ${event.target.value.length}`;
+        // });
+
+        // take only alphabet number
+        // let input = document.querySelector("input");
+        // let p = document.querySelector("p");
+        // input.addEventListener("input", (event)=>{
+        //     event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+        //     p.innerText = event.target.value;
+        // })
+
+        // password
+        let pass = document.querySelector("input");
+        let p = document.querySelector("p");
+        pass.addEventListener("input", (event)=>{
+            p.innerText = `Length: ${event.target.value.length}`;
+        });
+    </script>
+</body>
+</html>
